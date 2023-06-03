@@ -1,0 +1,50 @@
+New Account Information
+
+Hosting Package: IN UNIQUE 1
+Domain: xtremefitnessgym.in
+First Payment Amount: ?830.00 INR
+Recurring Amount: ?830.00 INR
+Billing Cycle: Annually
+Next Due Date: Monday, June 3rd, 2024
+
+Login Details
+
+Username: xtremefitnessgym
+Password: YUP(I_*TW.9n
+
+Control Panel URL: https://ln1.hostinor.com:2083/
+Once your domain has propagated, you may also use https://www.xtremefitnessgym.in/cpanel  and  https://www.xtremefitnessgym.in:2083/
+
+Server Information
+
+Server Name: Linode Singapore Server
+Server IP: 23.106.66.209
+
+If you are using an existing domain with your new hosting account, you will need to update the nameservers to point to the nameservers listed below.
+
+Nameserver 1: ns1.hostinor.com (198.251.90.191)
+Nameserver 2: ns2.hostinor.com (198.251.90.192)
+Nameserver 3: ns3.hostinor.com (198.251.90.193)
+Nameserver 4: ns4.hostinor.com (116.203.0.64)
+
+Uploading Your Website
+
+Temporarily you may use one of the addresses given below to manage your web site:
+
+Temporary FTP Hostname: 23.106.66.209
+Temporary Webpage URL: http://23.106.66.209/~xtremefitnessgym/
+
+And once your domain has propagated you may use the details below:
+
+FTP Hostname: xtremefitnessgym.in
+Webpage URL: http://www.xtremefitnessgym.in
+
+Email Settings
+
+For email accounts that you setup, you should use the following connection details in your email program:
+
+POP3 Host Address: mail.xtremefitnessgym.in
+SMTP Host Address: mail.xtremefitnessgym.in
+Username: The email address you are checking email for
+Password: As specified in your control panel
+

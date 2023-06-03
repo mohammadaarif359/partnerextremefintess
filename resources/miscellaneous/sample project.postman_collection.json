@@ -1,0 +1,519 @@
+{
+	"info": {
+		"_postman_id": "02071fc8-dede-430f-80c3-8233e7725462",
+		"name": "sample project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17276512"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "aarif",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "mohammedaarif358@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "8290027572",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/signup",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjU3YzJmZmE5NzQyZGE4MjNlMGNlNmFiOGQ4MjNiMjQ4ODgyY2Y3ZTY5MWQwZTk0ZWU4YmU0ODM5NzUzMzA3OGM2MzJkYzMzNjM5YTNkMTIiLCJpYXQiOjE2NjMxNTI3MjIuNzAyNDE3LCJuYmYiOjE2NjMxNTI3MjIuNzAyNDIzLCJleHAiOjE2OTQ2ODg3MjIuNjAzNjg0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.OMpme5vNkwO0UbQ6UgWGB3u9I1IO06jg6DtrHC0d68kphJSuoWnpI9l_bVmlG3lRiFPb6rnWzMGHgGttYIQHqa3d5XLOf4U0gW6edeSErAsZttLBnDib6d0d1_kllvk7vt9_5e-NFXJek5UsqASyBATfdCP62qQYhfkiJn-LQOz0oBpWFL7Lttat9w_HpBlx7ck8P5KtS7Yfs8Tw0qQ-v0HE9nUbBGqGOk9jFCOdj111q71fy0wJkMiQ_pSQLuMA2sJFJqCFEC8-aj_SvZc00VS5i40mFFb33T0u39hR1daJ5vl3n2R_cNgSqZ0KY0fAqPR2WMVKA017LHvLH962dT5GUx77zd5xNnPLsnL7S3K9s6lkzYF-KdBekBHYwuVgyDAkB81voxi9zAdChp7UKg8IL5zt4TJw3p-fwHP_UgRdwHrsBtG_jocfmLb81iqPrrco7WjvApjNP8FQHsQwFFGbh6dDesTVsL6IaKt6CQrpQTiUrY_GZbGuR44-9O7arCCPnhYkywFYHozfxIvN7rnISq5L18MlcHusHhqG9PtzV00Brd7CTYbQtX3jVMtEGAavzby9OQWli1ESYPjlYKZvSqAjaysmnB95sKlVuMX-YKl6Xq79Idz-4mShpK2pwVFmchbbqZBCUnCORrSYF2AtvdBnYgRH3vCmb1HLtBc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "aarif",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "mohammedaarif359@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "8290027571\n",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/user-update",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"user-update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "8290027571",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/login",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"login"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMGI3OTY1YTNhZDgzYWU1Yjk4NzdlNzAwN2ExNmE2Yjg5YTk0ZDYyZDU3MzIyNDM3ZWMyMWM2NDVlZDVlZmRlZGI3NDY0MDYyYzU1MjExYjkiLCJpYXQiOjE2NjMxNTI2MDIuMDc3OTU0LCJuYmYiOjE2NjMxNTI2MDIuMDc3OTY0LCJleHAiOjE2OTQ2ODg2MDIuMDI4OTg4LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.FaAIfRjoEy5kCGc_-QDIcR2ITvgDF1U0z8R7-jw1Id2wWRNFDYtlD5AcXaI9GvxKvMDU3wn2W4Pa20mmAFAi8RPjH-KW3femB8v87wv3APpJEW3T3NQub1YKUSeFzokILGdwDJvVXCJdkmtHIzKErX456uAJTcD1vbeuyLIh7GmZqQCOEkbFdYRLRg3OHsrbZKoAuFdEO-83_U5VXBUZ5CkM297AS43cEGRBKNQY51LmM5dO6qC6qrjvmx_AOQBIFMsI2aZrrWfary4QnR4bxr5vPh6I3YoMBEwn0tvdJEgDbOmu6Rf7jXbbe0FwVD3dZDPSf2mAbRq0o1GrNOtk58_MtoI95ldfR826CQ6nVgtyywLDmqqIsHe0AboYtb2rd3p-zioQG2b1Xr39T25_GbD8Oc2mZ2YjRwcpnMEslZ18TfuuPrFF6ZrXZq4RjMRbBBpMRIt75eyVGZiVq93cqAY35xR6KO2oL7-2Z2buxYZ9iyTvp_1n2pEg-AlFQViTSTxveEzmFyH2W0UukdCOUgNtcxw3j2r7fYToGW2HGrADFyBNU7_u0az4o1IrtnThJmeJzLh2oXtyGwGAz9qiOlPHtheprBYFVJIhUtCTn_zOygArLjp7Z176JHMyGnBmuWeOCoq_GGN8_orFvlPT8KFlmESBJlTvo02sDRflpeo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "mohammedaarif357@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/logout",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"logout"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "is logged",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODExZWMzNTdkY2IzNzllMTI1YzJjZDJlNDAwM2RjOTkxYTI3ZjViZmY4ZjRlNzEyODdlZjUyNjQ4NTk4NWU5NTUxNGExZjVmNzczMWNiNmMiLCJpYXQiOjE2NjMzMjEwOTQuNjMxNjQ4LCJuYmYiOjE2NjMzMjEwOTQuNjMxNjU4LCJleHAiOjE2Nzg5NTk0OTQuNTY5NSwic3ViIjoiSIsInNjb3BlcyI6W119.ism9P-eYyW1Po6A-RvnIbyV1wS0ColKn6U8617CDz_6j_rN6dV2_TS9UyzgxsUzLv_EhybpuVBlDrmSlakc4gvXO7SFyXN80cB0dCXtuuSFrX4ZpU-G4z8Mwl-5lJqF9l831kXOM2Z8zUWaWVLr_xmuzuISFxEVHZ4mcx22LNap0exkJos2lzGcaEGCTKm-mNVgltRllpVaBc6SJymFWCn32nIWfSM6ut3INhK6R5ScRtXvJWKRZl1xxSCo-QNltMERhBi0VXTmgxRifAZ9ORdvZqO6FPO_CDYqRAJo5JpCnBJlz-OZSKo62EF_hXDG9M_6ZLos5P9CqXeNK9f7UtNQ6eWeblqkI3m0oWsd3qqpXj3SV-ITZMcaMNEuDe0GpUPHJ2NTLJ34YiAg2-YL3TLVWWTIEC50XdIcUbZCWaIZW2mjfsr5KI6iEFIk6M5mRl5wMvwNK61jYXwsyjVp75RVrLlEpJiPuBlxOGTXVM6TrX0Dp_REldK97KMxKKVzQxcUo5keTYJs4OMEaPqx5On1EmHqinUaRKxI5Tdn58bNAfbDDRBev0qs0Q46LGvf37uSZmCwLP4NL9rE6YT8dsl0iv5lmwMLCRG_ztjcCcAI_6WxVjdLwqIWy9knUB48EGQDSkonIWhVdg_Ph92sMeg57Yx3vgEVWdOCsIJCQkHM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "mohammedaarif357@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/is_logged",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"is_logged"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjQ0ZWVhNjgxMjNiY2M0YWNmNDljM2M3NWMxZDk3MjlkMzQ2YTM5YjE4MWMwYjY3MjhhZWM2MWFiNTE0ODk2OGU0MDQ5ODI4N2IyNzU3NWQiLCJpYXQiOjE2NjM4MjQ0MzUuNjA3MDE3LCJuYmYiOjE2NjM4MjQ0MzUuNjA3MDI4LCJleHAiOjE2NjM4MjQ0OTUuNTM2MDQ4LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.eJduse8t9seIoZdl__KIfIpsSd9EwxUwLQ4CPbYEEjhDt3NmS1b12ry879xvBCVveRsQCia40ugQCN0yJ58UP1V9hUWUmfdpEAY3VWbBmAxz4W7xVHCQfeS-2EcWQXoLaqpGWgmrvnGbdDpBXlDJiIfwK7FRmZCxZuyegyZsyBhZaGGhLT2cvd2HAcovCkhvevfDR0YkdklULpOdbL6YrOAM-iHtTdxfN-0drI2ELfQpnUzg5cN3_ZUITjjgDC3ZI3xWNQPRJQ2FXz9JcdVAUMbzOQkJ7n4lZpNb-iQjRIG-OezyGfqxZa85c3PUnpT7Dv9pO1bsitBpZSHUBmFPkLZcJ-OgpLKoTQQBocrjBQnSMZFinfC6HcFLCN8-0rrkCvn8zF5Yo6K2v4dg9_-ApWnUNOBW7-kdr8NbpgtmIZ-SYHMY9zDrDZiA7Nrj_IWdR2NdAkacK5ephcvAnrIeo6Byj-ozRzwpM4Z7YoXkTE0zmu3THDmfJmiSQoAiwt02LZq6hfhfxNKDI5-oywqpNGymECeCIcBR2VtjuWBQTzufyj6oQVHy8UoD5W4ndcaFrLyu0ObiVJTfhx4MZ5s2VjV2Sk5BnyvS5jUM6pF8hidlhd8wDNiFIPbKiFcAAl8vGKNQfR_MhZtET_cU2nusABU-pjBKH7QE7_Wzck4F3pQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "mohammedaarif357@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/user-profile",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"user-profile"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjU3YzJmZmE5NzQyZGE4MjNlMGNlNmFiOGQ4MjNiMjQ4ODgyY2Y3ZTY5MWQwZTk0ZWU4YmU0ODM5NzUzMzA3OGM2MzJkYzMzNjM5YTNkMTIiLCJpYXQiOjE2NjMxNTI3MjIuNzAyNDE3LCJuYmYiOjE2NjMxNTI3MjIuNzAyNDIzLCJleHAiOjE2OTQ2ODg3MjIuNjAzNjg0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.OMpme5vNkwO0UbQ6UgWGB3u9I1IO06jg6DtrHC0d68kphJSuoWnpI9l_bVmlG3lRiFPb6rnWzMGHgGttYIQHqa3d5XLOf4U0gW6edeSErAsZttLBnDib6d0d1_kllvk7vt9_5e-NFXJek5UsqASyBATfdCP62qQYhfkiJn-LQOz0oBpWFL7Lttat9w_HpBlx7ck8P5KtS7Yfs8Tw0qQ-v0HE9nUbBGqGOk9jFCOdj111q71fy0wJkMiQ_pSQLuMA2sJFJqCFEC8-aj_SvZc00VS5i40mFFb33T0u39hR1daJ5vl3n2R_cNgSqZ0KY0fAqPR2WMVKA017LHvLH962dT5GUx77zd5xNnPLsnL7S3K9s6lkzYF-KdBekBHYwuVgyDAkB81voxi9zAdChp7UKg8IL5zt4TJw3p-fwHP_UgRdwHrsBtG_jocfmLb81iqPrrco7WjvApjNP8FQHsQwFFGbh6dDesTVsL6IaKt6CQrpQTiUrY_GZbGuR44-9O7arCCPnhYkywFYHozfxIvN7rnISq5L18MlcHusHhqG9PtzV00Brd7CTYbQtX3jVMtEGAavzby9OQWli1ESYPjlYKZvSqAjaysmnB95sKlVuMX-YKl6Xq79Idz-4mShpK2pwVFmchbbqZBCUnCORrSYF2AtvdBnYgRH3vCmb1HLtBc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "mohammedaarif357@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/user-delete",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"user-delete"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "password request",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "mohammedaarif359@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/password/request",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"password",
+								"request"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "password reset",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjU3YzJmZmE5NzQyZGE4MjNlMGNlNmFiOGQ4MjNiMjQ4ODgyY2Y3ZTY5MWQwZTk0ZWU4YmU0ODM5NzUzMzA3OGM2MzJkYzMzNjM5YTNkMTIiLCJpYXQiOjE2NjMxNTI3MjIuNzAyNDE3LCJuYmYiOjE2NjMxNTI3MjIuNzAyNDIzLCJleHAiOjE2OTQ2ODg3MjIuNjAzNjg0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.OMpme5vNkwO0UbQ6UgWGB3u9I1IO06jg6DtrHC0d68kphJSuoWnpI9l_bVmlG3lRiFPb6rnWzMGHgGttYIQHqa3d5XLOf4U0gW6edeSErAsZttLBnDib6d0d1_kllvk7vt9_5e-NFXJek5UsqASyBATfdCP62qQYhfkiJn-LQOz0oBpWFL7Lttat9w_HpBlx7ck8P5KtS7Yfs8Tw0qQ-v0HE9nUbBGqGOk9jFCOdj111q71fy0wJkMiQ_pSQLuMA2sJFJqCFEC8-aj_SvZc00VS5i40mFFb33T0u39hR1daJ5vl3n2R_cNgSqZ0KY0fAqPR2WMVKA017LHvLH962dT5GUx77zd5xNnPLsnL7S3K9s6lkzYF-KdBekBHYwuVgyDAkB81voxi9zAdChp7UKg8IL5zt4TJw3p-fwHP_UgRdwHrsBtG_jocfmLb81iqPrrco7WjvApjNP8FQHsQwFFGbh6dDesTVsL6IaKt6CQrpQTiUrY_GZbGuR44-9O7arCCPnhYkywFYHozfxIvN7rnISq5L18MlcHusHhqG9PtzV00Brd7CTYbQtX3jVMtEGAavzby9OQWli1ESYPjlYKZvSqAjaysmnB95sKlVuMX-YKl6Xq79Idz-4mShpK2pwVFmchbbqZBCUnCORrSYF2AtvdBnYgRH3vCmb1HLtBc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "mohammedaarif359@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "otp",
+									"value": "2803",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/password/reset",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"password",
+								"reset"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save device",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiM2IwODIxMzJhMTg5YTk4MDM5MDI3MTgxNmM2ZDZhNjI0NWU4Zjc5MjVkMTBmMmE3NWMwODgwN2RiOTEwYTAzYTJhZWFmYWVlMzEyZWEwZmYiLCJpYXQiOjE2NjMzMDU4OTkuODAyMzAzLCJuYmYiOjE2NjMzMDU4OTkuODAyMzEyLCJleHAiOjE2Nzg5NDQyOTkuNDY1ODM5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.ttsm8DSo189XSTv36Nqc9T2WkH1uwpw1MnXYcLiXTdZxU8p4BQNdkwwQKLNq_6J4iV5_Zz0i5gEADCDT_YK6hWIkho_xF-o6NrcejFYFVxxri_-Uhj-7cVq68bU2dyzu-Lp-HAN8HzNXFv15JBkojBh_R9HO94Ie6eCWx1EKxYMrmWVuEtfMuC0Y7VImcahGl-svDewOcyMR2WX3GSVYmVGLCQmRRSV2736wVLakKzVy-vHjeXspZP9hxQ9BATXiMABzDG3Ucg_rWZTTIzAQslZEFCUWk0-aPt6jO11Xw9mneTFsI_X94_Nrn0llKvh3JVArq3ZpcbWwjzwdg221yipkIhfYz9r8bSL0KsPqAoqfObqbtceF65i_7N-L00jf7tMZT2B6RSrG_Uhj3J4M6y1bG9IfSdETCaTLI9jE1D1zbZ4vKNHdTy2Rb5P3DDLDChG7kgO5lK8QRp-GD_8K5i9SdY1tjO7NNM0YMbdgeeXoz_3nI9uQyeuUgqhzVSsJjCp1O0eBkv_gb7Nnnf5s4-Fpi0Zl_Myl4xIExB6P2ZdzGLcAEl-TOJg16h9f3yYlyKXp0sU0r9uncc-1sYiTmklnnDVuNPFixylpg2tAMjhNJ-WF9usG2Ano6SrBgz4I4TsRYZN7puw8PQc71dmappjSBnLRDYKyawE-wh-suMU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "udid",
+									"value": "861428030025820",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "ANDROID",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "ee66BbUh_UQ:APA91bEuFhyZyMVXcOJuZ_9UdfMJttLj_6jfsgMWMGX1idvgl0jAsvh1AG81AcZKJUoJBiD66UVcXKbClclvNnkL4wS7kYL_4zw1k8W972bohzabvMJh07EciSYaDunNSaGpSe_tItHE",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/save-device",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"save-device"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/change-password",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "password otp verify",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
