@@ -49,7 +49,7 @@
     var table = $('#example1').DataTable({
         processing: true,
         serverSide: true,
-        ajax: "{{ route('admin.member-plan',$member_id) }}",
+        ajax: "{{ url('/admin/member-plan/'.$member_id.'?partner_id='.$partner_id) }}",
         columns: [
             {data: 'member_plan.title', name: 'member_plan.title'},
             {data: 'amount', name: 'amount'},

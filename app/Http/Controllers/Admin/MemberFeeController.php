@@ -20,8 +20,8 @@ class MemberFeeController extends Controller
 		if ($request->ajax()) {
 			$memeberFees = MemberFee::where('member_id',$member_id)->get();
 			return Datatables::of($memeberFees)
-				->addColumn('action', function ($data) {
-					$btn = '<a href="/admin/member-fee/'.$data->member_id.'/edit/'.$data->id.'" class="" title="Edit"><i class="fa fa-edit"></i></a></a>';
+				->addColumn('action', function ($data) use($partner_id) {
+					$btn = '<a href="/admin/member-fee/'.$data->member_id.'/edit/'.$data->id.'?partner_id='.$partner_id.'" class="" title="Edit"><i class="fa fa-edit"></i></a></a>';
 					return $btn;
 				})->editColumn('created_at', function ($data) {
 					return [
@@ -83,7 +83,7 @@ class MemberFeeController extends Controller
 				$member->save();
 			}
 		}
-		return redirect()->route('admin.member-fee',$request_data['member_id'])->with('success', 'Member fee submited Successfully !');
+		return redirect()->route('admin.member-fee',[$request_data['member_id'],'partner_id' => $request_data['partner_id']])->with('success', 'Member fee submited Successfully !');
 	}
 	public function edit(Request $request,$member_id,$id) {
 		$partner_id = (Auth::user()->hasRole('gym-partner')) ?  Auth::user()->partner_id : $request->partner_id;
@@ -132,7 +132,7 @@ class MemberFeeController extends Controller
 				$member->next_fee_month = date("Y-m-d", strtotime($member->last_fee_month . "+".$duration." months"));
 				$member->save();
 			}
-			return redirect()->route('admin.member-fee',$request_data['member_id'])->with('success', 'Fee updated successfully !');
+			return redirect()->route('admin.member-fee',[$request_data['member_id'],'partner_id' => $request_data['partner_id']])->with('success', 'Fee updated successfully !');
 		} else {
 			return redirect()->back()->with('error', 'Failer to updated fee not found !');
 		}

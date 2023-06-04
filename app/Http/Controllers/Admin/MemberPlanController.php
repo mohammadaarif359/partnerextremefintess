@@ -24,7 +24,7 @@ class MemberPlanController extends Controller
 			$memeberPlans = MemberPlan::with(['member_plan'])->where('member_id',$member_id)->get();
 			return Datatables::of($memeberPlans)
 				->addColumn('action', function ($data) use($partner_id){
-					$btn = '<a href="/admin/member-plan/'.$data->member_id.'/edit/'.$data->id.'?partner_id='.$partner_id.'" class="" title="Edit"><i class="fa fa-edit"></i></a><a href="/admin.user.delete/'.$data->id.'" class="" title="Delete"><i class="fa fa-trash"></i></a>';
+					$btn = '<a href="/admin/member-plan/'.$data->member_id.'/edit/'.$data->id.'?partner_id='.$partner_id.'" class="" title="Edit"><i class="fa fa-edit"></i></a>';
 					return $btn;
 				})->editColumn('created_at', function ($data) {
 					return [
@@ -83,7 +83,7 @@ class MemberPlanController extends Controller
 			$this->sendMemberPlanEmail($data);
 			
 		}
-		return redirect()->route('admin.member-plan',$request_data['member_id'])->with('success', 'Member plan assign Successfully !');
+		return redirect()->route('admin.member-plan',[$request_data['member_id'],'partner_id' => $request_data['partner_id']])->with('success', 'Member plan assign Successfully !');
 	}
 	public function edit(Request $request,$member_id,$id) {
 		$partner_id = (Auth::user()->hasRole('gym-partner')) ?  Auth::user()->partner_id : $request->partner_id;
@@ -119,7 +119,7 @@ class MemberPlanController extends Controller
 			$plan->remark = $request_data['remark'];
 			$plan->status = $request_data['status'];
  			$plan->save();
-			return redirect()->route('admin.member-plan',$request_data['member_id'])->with('success', 'Plan updated successfully !');
+			return redirect()->route('admin.member-plan',[$request_data['member_id'],'partner_id' => $request_data['partner_id']])->with('success', 'Plan updated successfully !');
 		} else {
 			return redirect()->back()->with('error', 'Failer to updated plan not found !');
 		}

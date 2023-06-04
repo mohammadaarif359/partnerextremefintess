@@ -9,7 +9,7 @@
 		  <h3 class="card-title">Member Plan</h3>
 		  <div class="card-tools">
 			  <div class="d-flex flex-row justify-content-center">			  
-				  <a href="{{ route('admin.member-fee.add',$member_id) }}" class="btn btn-primary btn-sm ml-2">Add</a>
+				  <a href="{{ route('admin.member-fee.add',[$member_id,'partner_id'=>$partner_id]) }}" class="btn btn-primary btn-sm ml-2">Add</a>
 			  </div>	
 		  </div>
 		</div>
@@ -49,7 +49,7 @@
     var table = $('#example1').DataTable({
         processing: true,
         serverSide: true,
-        ajax: "{{ route('admin.member-fee',$member_id) }}",
+		ajax: "{{ url('/admin/member-fee/'.$member_id.'?partner_id='.$partner_id) }}",
         columns: [
 			{data: 'amount', name: 'amount'},
             {data: 'amount', name: 'amount'},
