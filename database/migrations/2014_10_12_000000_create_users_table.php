@@ -24,7 +24,7 @@ return new class extends Migration
 			$table->rememberToken();
 			$table->string('forgot_password_token')->nullable();
 			$table->string('profile_photo')->nullable();
-			$table->bigIneger('partner_id')->default(0);
+			$table->bigInteger('partner_id')->default(0);
             $table->timestamps();
         });
     }
