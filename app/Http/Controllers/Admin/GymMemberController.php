@@ -42,13 +42,20 @@ class GymMemberController extends Controller
 					];
 				})->editColumn('status', function ($data) {
 					return $data->status == 1 ? 'Active' : 'Deactive';
+				})->editColumn('profile_photo_url', function ($data) {
+					if(!empty($data->profile_photo_url)) {
+						$btn = '<img src="'.$data->profile_photo_url.'" class="img img-resposive" height="100px" width="100px">';
+					} else {
+						$btn = '';
+					}
+					return $btn;	
 				})->addColumn('plan_title', function ($data) {
 					return !empty($data->active_assoc_plan) && isset($data->active_assoc_plan->member_plan) ? $data->active_assoc_plan->member_plan['title'] : ''; 
 				})->addColumn('plan_duration', function ($data) {
 					return !empty($data->active_assoc_plan) && isset($data->active_assoc_plan->member_plan) ? $data->active_assoc_plan->member_plan['duration'] : ''; 
 				})->addColumn('amount', function ($data) {
 					return !empty($data->active_assoc_plan) ? $data->active_assoc_plan['amount'] : ''; 
-				})
+				})->rawColumns(['profile_photo_url','action'])
 				->make(true);
 		}
 		return view('admin.gym-member.list',compact('partner_id'));

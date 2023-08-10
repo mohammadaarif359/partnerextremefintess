@@ -28,6 +28,7 @@
 							<th>Duration (Months)</th>
 							<th>Amount</th>
 							<th>Status</th>
+							<th>Profile</th>
 							<th>Created At</th>
 							<th>Action</th>
 						</tr>
@@ -63,6 +64,7 @@
 			{data: 'plan_duration', name: 'plan_duration'},
 			{data: 'amount', name: 'amount'},
 			{data: 'status', name: 'status'},
+			{data: 'profile_photo_url', name: 'profile_photo_url'},
 			{data: 'created_at.display', name: 'created_at.display'},
 			{data: 'action', name: 'action', orderable: false, searchable: false},
         ]
