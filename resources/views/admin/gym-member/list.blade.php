@@ -21,6 +21,7 @@
 					<thead>
 						<tr>
 							<th>Name</th>
+							<th>Profile</th>
 							<th>Email</th> 
 							<th>Mobile</th>
 							<th>Joining Date</th>
@@ -28,7 +29,6 @@
 							<th>Duration (Months)</th>
 							<th>Amount</th>
 							<th>Status</th>
-							<th>Profile</th>
 							<th>Created At</th>
 							<th>Action</th>
 						</tr>
@@ -57,6 +57,7 @@
         ajax: "{{ url('/admin/gym-member?partner_id='.$partner_id) }}",
         columns: [
             {data: 'name', name: 'name'},
+			{data: 'profile_photo_url', name: 'profile_photo_url'},
             {data: 'email', name: 'email'},
             {data: 'mobile', name: 'mobile'},
 			{data: 'joining_date.display', name: 'joining_date.display'},
@@ -64,7 +65,6 @@
 			{data: 'plan_duration', name: 'plan_duration'},
 			{data: 'amount', name: 'amount'},
 			{data: 'status', name: 'status'},
-			{data: 'profile_photo_url', name: 'profile_photo_url'},
 			{data: 'created_at.display', name: 'created_at.display'},
 			{data: 'action', name: 'action', orderable: false, searchable: false},
         ]
